@@ -4,7 +4,7 @@ class Test5(scrapy.Spider):
     name = 'test5'
     start_urls = ['https://www.brainyquote.com/authors/g']
 
-    def parse(self, response):
+    def parse_author_page(self, response):
         author_by_letter = response.css('td a::attr(href)').getall() #Get all author links of each page
         self.logger.info(f'Authors by letter are: {author_by_letter}')
         
