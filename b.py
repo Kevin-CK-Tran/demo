@@ -6,3 +6,6 @@ aaaaa
 
 
 b
+
+a
+bool
